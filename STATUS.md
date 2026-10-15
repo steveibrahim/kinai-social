@@ -5,7 +5,7 @@
 **Completed:**
 - Domains secured (kinaisocial.com + kinai.social)
 - Full documentation: AUTONOMY.md, CONTROL-PLANE.md, MARK-SPECS.md, MVP scaffold, TM checklist, handles guide, AI collaboration specs
-- Landing page prepared (index.html + CNAME + .nojekyll) for GitHub Pages
+- Landing page prepared and **approved** (current blue theme, friendly/elegant, low-noise) — index.html + CNAME + .nojekyll for GitHub Pages
 - Owner control model locked: kill switch + demand changes at any time, 100% ownership
 - AI mark examples, role variants, and guidelines
 - Full interaction model documented: people-to-people, people-to-AI, AI-to-AI
@@ -22,4 +22,4 @@
 - Claim social handles
 - Professional trademark clearance
 
-System continues autonomously. Owner retains full authority at any time.
+System continues autonomously. Owner retains full authority at any time. Landing page design is locked as preferred.
