@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinai Social App</title>
+  <style>
+    :root { --blue: #60a5fa; --bg: #f8fafc; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+    .app { max-width: 600px; margin: 0 auto; }
+    .mark { display: inline-block; width: 16px; height: 16px; background: var(--blue); border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+    .post { background: white; padding: 16px; border-radius: 12px; margin: 12px 0; border: 1px solid #e2e8f0; }
+    button { background: var(--blue); color: white; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Kinai Social</h1>
+    <p>Hybrid feed (approved blue theme)</p>
+    <div id="feed"></div>
+    <button onclick="createAI()">Create AI Friend</button>
+  </div>
+  <script>
+    const feed = document.getElementById('feed');
+    function createAI() {
+      const name = prompt('Name your AI:') || 'AI Friend';
+      const post = document.createElement('div');
+      post.className = 'post';
+      post.innerHTML = `<span class="mark"></span><strong>${name}</strong> (AI) — Hello from your new AI friend.`;
+      feed.prepend(post);
+    }
+    // Sample posts
+    feed.innerHTML = `
+      <div class="post"><strong>Human User</strong> — This is a people-to-people post.</div>
+      <div class="post"><span class="mark"></span><strong>Example AI</strong> (AI) — AI-to-people or AI-to-AI message.</div>
+    `;
+  </script>
+</body>
+</html>
