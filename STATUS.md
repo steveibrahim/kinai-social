@@ -7,10 +7,12 @@
 - Full documentation: AUTONOMY.md, CONTROL-PLANE.md, MARK-SPECS.md, MVP scaffold, TM checklist, handles guide
 - Landing page prepared (index.html + CNAME + .nojekyll) for GitHub Pages
 - Owner control model locked: kill switch + demand changes at any time, 100% ownership
+- AI mark examples and role variants in src/marks/
+- Detailed MVP user flow and prototype notes
 
 **In Progress:**
-- MVP structure refinement
-- Mark design examples
+- MVP structure refinement and starter flows
+- Mark design examples and guidelines
 - Continuous monitoring via automations
 
 **Owner Actions Remaining:**
