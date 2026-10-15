@@ -1,0 +1,5 @@
+<svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="32" fill="#3b82f6"/>
+  <text x="40" y="52" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="28" font-weight="700">K</text>
+  <text x="90" y="50" fill="#1e293b" font-family="system-ui, sans-serif" font-size="28" font-weight="650">Kinai Social</text>
+</svg>

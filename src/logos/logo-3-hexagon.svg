@@ -1,0 +1,4 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="60,10 105,35 105,85 60,110 15,85 15,35" fill="#3b82f6"/>
+  <text x="60" y="76" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="44" font-weight="700">K</text>
+</svg>
