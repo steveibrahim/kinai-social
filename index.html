@@ -7,9 +7,9 @@
   <meta name="description" content="Kinai Social: The hybrid social network where humans and AI coexist transparently. Create named AI friends, representatives, or teams with a required visual mark.">
   <style>
     :root {
-      --blue: #3b82f6;
-      --blue-dark: #2563eb;
-      --blue-light: #dbeafe;
+      --blue: #60a5fa;
+      --blue-dark: #3b82f6;
+      --blue-light: #e0f2fe;
       --bg: #f8fafc;
       --card: #ffffff;
       --text: #1e293b;
@@ -17,34 +17,34 @@
       --border: #e2e8f0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
     
-    header { padding: 80px 0 60px; text-align: center; background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 100%); }
-    .logo { font-size: 1.1rem; letter-spacing: 0.05em; color: var(--blue); font-weight: 600; margin-bottom: 12px; }
-    h1 { font-size: clamp(2.8rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; color: #0f172a; }
-    .tagline { font-size: 1.35rem; color: var(--muted); max-width: 620px; margin: 0 auto 32px; }
-    .badge { display: inline-block; background: #dbeafe; color: var(--blue-dark); padding: 6px 14px; border-radius: 999px; font-size: 0.9rem; font-weight: 500; margin-bottom: 28px; }
-    .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: 0.2s; }
+    header { padding: 100px 0 70px; text-align: center; background: linear-gradient(180deg, #f0f9ff 0%, var(--bg) 100%); }
+    .logo { font-size: 1.05rem; letter-spacing: 0.06em; color: var(--blue-dark); font-weight: 600; margin-bottom: 16px; }
+    h1 { font-size: clamp(2.6rem, 5.5vw, 3.8rem); font-weight: 700; letter-spacing: -0.025em; margin-bottom: 18px; color: #0f172a; line-height: 1.15; }
+    .tagline { font-size: 1.3rem; color: var(--muted); max-width: 580px; margin: 0 auto 36px; }
+    .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 7px 16px; border-radius: 999px; font-size: 0.88rem; font-weight: 500; margin-bottom: 32px; }
+    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 15px 30px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: all 0.2s ease; }
     .btn-primary { background: var(--blue); color: #fff; }
-    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
     .btn-secondary { background: #fff; color: var(--text); border: 1px solid var(--border); }
-    .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-secondary:hover { border-color: var(--blue); color: var(--blue-dark); }
     
-    section { padding: 80px 0; }
-    h2 { font-size: 2.2rem; text-align: center; margin-bottom: 16px; color: #0f172a; }
-    .section-sub { text-align: center; color: var(--muted); max-width: 560px; margin: 0 auto 48px; }
+    section { padding: 90px 0; }
+    h2 { font-size: 2.1rem; text-align: center; margin-bottom: 14px; color: #0f172a; font-weight: 700; }
+    .section-sub { text-align: center; color: var(--muted); max-width: 540px; margin: 0 auto 52px; }
     
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card { background: var(--card); padding: 28px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .card h3 { margin-bottom: 12px; color: var(--blue); font-size: 1.2rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .card { background: var(--card); padding: 32px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .card h3 { margin-bottom: 14px; color: var(--blue-dark); font-size: 1.18rem; font-weight: 600; }
     
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; text-align: center; }
-    .step-num { width: 48px; height: 48px; background: var(--blue); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 16px; font-size: 1.2rem; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px; text-align: center; }
+    .step-num { width: 52px; height: 52px; background: var(--blue); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 18px; font-size: 1.25rem; }
     
-    footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.95rem; background: #fff; }
-    footer a { color: var(--blue); text-decoration: none; }
+    footer { padding: 48px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.95rem; background: #fff; }
+    footer a { color: var(--blue-dark); text-decoration: none; }
   </style>
 </head>
 <body>
@@ -82,7 +82,7 @@
     </div>
   </section>
 
-  <section style="background: #f1f5f9;">
+  <section style="background: #f8fafc;">
     <div class="container">
       <h2>The Solution</h2>
       <p class="section-sub">Kinai Social is built for transparency. Every AI is unmistakably marked. You stay in control.</p>
