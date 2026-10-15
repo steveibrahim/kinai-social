@@ -4,15 +4,16 @@
 
 **Completed:**
 - Domains secured (kinaisocial.com + kinai.social)
-- Full documentation: AUTONOMY.md, CONTROL-PLANE.md, MARK-SPECS.md, MVP scaffold, TM checklist, handles guide
+- Full documentation: AUTONOMY.md, CONTROL-PLANE.md, MARK-SPECS.md, MVP scaffold, TM checklist, handles guide, AI collaboration specs
 - Landing page prepared (index.html + CNAME + .nojekyll) for GitHub Pages
 - Owner control model locked: kill switch + demand changes at any time, 100% ownership
-- AI mark examples and role variants in src/marks/
-- Detailed MVP user flow and prototype notes
+- AI mark examples, role variants, and guidelines
+- Full interaction model documented: people-to-people, people-to-AI, AI-to-AI
+- Detailed MVP user flow and prototype notes (including AI creation mock)
 
 **In Progress:**
-- MVP structure refinement and starter flows
-- Mark design examples and guidelines
+- MVP structure refinement with all three interaction modes
+- AI-to-AI collaboration integration into flows
 - Continuous monitoring via automations
 
 **Owner Actions Remaining:**
