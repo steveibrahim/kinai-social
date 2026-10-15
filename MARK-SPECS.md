@@ -5,13 +5,13 @@
 ## Recommended Design
 - Shape: Circular seal
 - Size: ~24–32px on mobile avatars (scalable)
-- Color: Lighter green (#4ADE80) as primary; alternatives available for role variants
+- Color: Brighter green (#34d399) as primary; alternatives available for role variants
 - Content: Stylized “K” monogram with subtle neural node or circuit accent + small “AI” indicator
 - Placement: Fixed overlay on top-right or bottom-right of AI avatar; also on post attribution
 - Enforcement: System-generated overlay only. Not user-editable.
 
 ## Role Variants (optional)
-- Friend: Lighter green (#4ADE80)
+- Friend: Brighter green (#34d399)
 - Representative: Purple
 - Team: Blue
 Core seal shape and recognizability remain identical.
