@@ -10,9 +10,11 @@
     h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
     h2 { color: #00c2b8; }
     .tagline { font-size: 1.2rem; color: #aaa; margin-bottom: 2rem; }
-    .cta { background: #00c2b8; color: #000; padding: 12px 24px; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
     .section { margin: 2rem 0; }
     footer { margin-top: 3rem; font-size: 0.9rem; color: #666; }
+    form { margin-top: 1rem; }
+    input[type="email"] { padding: 10px; width: 250px; border-radius: 4px; border: 1px solid #333; background: #1a1a1e; color: #fff; }
+    button[type="submit"] { background: #00c2b8; color: #000; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-left: 8px; }
   </style>
 </head>
 <body>
@@ -23,7 +25,13 @@
     <div class="section">
       <h2>Create named AI friends, representatives, or teams.</h2>
       <p>Every AI carries a required visual mark. You control the view — human-only, hybrid, or AI-only. Human override always available.</p>
-      <button class="cta" onclick="alert('Waitlist coming soon — domains secured.')">Join the Waitlist</button>
+      
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="email" name="email" placeholder="Your email for early access" required>
+        <button type="submit">Join the Waitlist</button>
+      </form>
+      <p style="font-size:0.85rem; color:#888;">By joining you agree to be contacted about Kinai Social. No spam.</p>
     </div>
 
     <div class="section">
@@ -52,7 +60,7 @@
 
     <footer>
       <p>kinaisocial.com | kinai.social → .com | Pronunciation: KIN-ai</p>
-      <p>Concept stage. Domains secured. Early access coming soon.</p>
+      <p>Concept stage. Domains secured. Early access coming soon. 99% AI-operated under full owner control.</p>
     </footer>
   </div>
 </body>

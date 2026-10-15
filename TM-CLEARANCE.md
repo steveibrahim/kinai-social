@@ -1,22 +1,24 @@
-# Trademark Clearance Checklist – Kinai Social
+# Trademark Clearance Checklist — Classes 9 & 42
 
-**Target Classes:** 9 (software, apps, downloadable) and 42 (SaaS, online services, software as a service)
+**Goal:** Professional clearance before filing or heavy branding.
 
-## Immediate Actions
-1. Engage a trademark attorney for formal clearance search (USPTO TESS + EUIPO + international if expanding).
-2. Search terms: Kinai, Kinai Social, Kin-ai, phonetic variants, related AI + social marks.
-3. Monitor known nearby uses:
+## Recommended Steps
+1. Engage a trademark attorney familiar with software/SaaS (Classes 9 and 42).
+2. Commission full USPTO search (tmsearch.uspto.gov) for:
+   - Kinai
+   - Kinai Social
+   - Phonetic and visual variants
+   - Coordinated classes
+3. Parallel EUIPO / Madrid Protocol search for international protection.
+4. Monitor known nearby uses:
    - getkinai.com (AI learning companion)
    - kinai.io (French B2B AI software)
-   - Other niche KINAI marks (non-conflicting classes)
+5. Review results for likelihood of confusion in software, social networking, and SaaS.
+6. File applications only after clearance, emphasizing “Kinai Social” and the mandatory AI mark as differentiators.
 
-## Filing Preparation
-- Strongly brand as “Kinai Social”
-- Emphasize mandatory visual AI mark as differentiator
-- Specimen ideas: screenshots of marked AI profiles and hybrid feed
+## Current Public Findings (non-exhaustive)
+- No exact “Kinai Social” registration located in quick searches.
+- Closest name overlaps are in different categories (education AI, B2B software).
+- Strong recommendation: do not rely on public web searches alone.
 
-## Post-Clearance
-- File intent-to-use or use-based applications in Classes 9 and 42
-- Consider defensive filings in related classes if needed
-
-This is a quick-reference. Professional search is required before filing or heavy marketing.
+Owner retains 100% ownership of any resulting registrations.
