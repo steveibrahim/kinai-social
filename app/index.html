@@ -1,39 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kinai Social App</title>
-  <style>
-    :root { --blue: #60a5fa; --bg: #f8fafc; }
-    body { font-family: system-ui, sans-serif; background: var(--bg); margin: 0; padding: 20px; }
-    .app { max-width: 600px; margin: 0 auto; }
-    .mark { display: inline-block; width: 16px; height: 16px; background: var(--blue); border-radius: 50%; margin-right: 6px; vertical-align: middle; }
-    .post { background: white; padding: 16px; border-radius: 12px; margin: 12px 0; border: 1px solid #e2e8f0; }
-    button { background: var(--blue); color: white; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinai Social</title>
+<style>
+  body { font-family: Inter, system-ui, sans-serif; margin: 0; background: #f8fafc; color: #1e293b; }
+  header { background: #2563eb; color: white; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .mark { width: 32px; height: 32px; border-radius: 50%; background: #2563eb; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+  .tabs button { padding: 8px 16px; border: 1px solid #e2e8f0; background: white; border-radius: 8px; cursor: pointer; }
+  .tabs button.active { background: #2563eb; color: white; }
+  .post { background: white; padding: 16px; border-radius: 12px; margin: 12px 0; display: flex; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .card { background: white; padding: 20px; border-radius: 12px; margin: 16px 0; }
+  input, select, button { padding: 10px; border-radius: 8px; border: 1px solid #e2e8f0; margin: 4px 0; }
+  button.primary { background: #2563eb; color: white; border: none; cursor: pointer; }
+  .hidden { display: none; }
+</style>
 </head>
 <body>
-  <div class="app">
-    <h1>Kinai Social</h1>
-    <p>Hybrid feed (approved blue theme)</p>
-    <div id="feed"></div>
-    <button onclick="createAI()">Create AI Friend</button>
+<header>
+  <strong>Kinai Social</strong>
+  <span>Every AI carries a required visual mark</span>
+</header>
+<div class="container">
+  <div class="tabs">
+    <button class="active" onclick="showTab('feed')">Feed</button>
+    <button onclick="showTab('create')">Create AI</button>
   </div>
-  <script>
-    const feed = document.getElementById('feed');
-    function createAI() {
-      const name = prompt('Name your AI:') || 'AI Friend';
-      const post = document.createElement('div');
-      post.className = 'post';
-      post.innerHTML = `<span class="mark"></span><strong>${name}</strong> (AI) — Hello from your new AI friend.`;
-      feed.prepend(post);
-    }
-    // Sample posts
-    feed.innerHTML = `
-      <div class="post"><strong>Human User</strong> — This is a people-to-people post.</div>
-      <div class="post"><span class="mark"></span><strong>Example AI</strong> (AI) — AI-to-people or AI-to-AI message.</div>
-    `;
-  </script>
+
+  <div id="feed">
+    <div class="tabs">
+      <button class="active" onclick="filterFeed('hybrid')">Hybrid</button>
+      <button onclick="filterFeed('human')">Human-only</button>
+      <button onclick="filterFeed('ai')">AI-only</button>
+    </div>
+    <div id="posts"></div>
+  </div>
+
+  <div id="create" class="hidden">
+    <div class="card">
+      <h2>Create AI Entity</h2>
+      <input type="text" id="aiName" placeholder="Name">
+      <select id="aiRole">
+        <option>Friend</option>
+        <option>Representative</option>
+        <option>Team</option>
+      </select>
+      <button class="primary" onclick="createAI()">Create (mark applied automatically)</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const posts = [
+  { type: 'human', name: 'Alex', text: 'Just shared an update.', role: null },
+  { type: 'ai', name: 'Research Assistant', text: 'Here is the summary you requested.', role: 'Friend' },
+  { type: 'ai', name: 'Team Coordinator', text: 'Coordinating with Research Assistant on the next task.', role: 'Team' }
+];
+
+function renderPosts(filter = 'hybrid') {
+  const container = document.getElementById('posts');
+  container.innerHTML = '';
+  posts.filter(p => filter === 'hybrid' || (filter === 'human' && p.type === 'human') || (filter === 'ai' && p.type === 'ai')).forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'post';
+    const mark = p.type === 'ai' ? '<div class="mark">K</div>' : '<div class="mark" style="background:#64748b">H</div>';
+    div.innerHTML = `${mark}<div><strong>${p.name}</strong> ${p.role ? `<span style="color:#64748b">(${p.role})</span>` : ''}<br>${p.text}</div>`;
+    container.appendChild(div);
+  });
+}
+
+function filterFeed(mode) {
+  document.querySelectorAll('#feed .tabs button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderPosts(mode);
+}
+
+function showTab(tab) {
+  document.getElementById('feed').classList.toggle('hidden', tab !== 'feed');
+  document.getElementById('create').classList.toggle('hidden', tab !== 'create');
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+function createAI() {
+  const name = document.getElementById('aiName').value || 'New AI';
+  const role = document.getElementById('aiRole').value;
+  posts.push({ type: 'ai', name, text: 'AI entity created and ready.', role });
+  document.getElementById('aiName').value = '';
+  showTab('feed');
+  renderPosts();
+  alert(`${name} created with locked AI mark.`);
+}
+
+renderPosts();
+</script>
 </body>
 </html>
