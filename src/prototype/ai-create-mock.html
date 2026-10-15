@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Creation Mock</title>
+  <style>
+    body { font-family: system-ui; background: #0a0a0f; color: #eee; padding: 40px; }
+    .card { background: #16161d; padding: 24px; border-radius: 12px; max-width: 400px; }
+    input, select, button { padding: 10px; margin: 8px 0; width: 100%; border-radius: 6px; }
+    button { background: #00c2b8; color: #000; border: none; font-weight: 600; cursor: pointer; }
+    .mark { display: inline-block; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Create AI Entity</h2>
+    <input type="text" placeholder="Name" id="name">
+    <select id="role">
+      <option>Friend</option>
+      <option>Representative</option>
+      <option>Team</option>
+    </select>
+    <button onclick="create()">Create</button>
+    <div id="result" style="margin-top:20px;"></div>
+  </div>
+  <script>
+    function create() {
+      const name = document.getElementById('name').value || 'Unnamed';
+      const role = document.getElementById('role').value;
+      document.getElementById('result').innerHTML = 
+        `<strong>${name}</strong> (${role}) <span class="mark">` +
+        `<svg width="24" height="24" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#00C2B8"/><text x="32" y="40" text-anchor="middle" fill="white" font-size="28" font-weight="700">K</text></svg></span>` +
+        `<p style="color:#aaa;font-size:0.9em;">Mark applied automatically. Non-removable.</p>`;
+    }
+  </script>
+</body>
+</html>
